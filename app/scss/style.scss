@@ -1,0 +1,36 @@
+// ------------------ Імпорт scss файлів ---------------
+
+@import "vars";
+@import "fonts";
+@import "optimize";
+@import "global";
+
+// ----------------------- Базові стилі ----------------
+
+:root {
+  font-size: 0.75em; // 12px
+}
+
+@media (min-width: 800px) {
+  :root {
+    font-size: 0.875em; // 14px
+  }
+}
+
+@media (min-width: 1150px) {
+  :root {
+    font-size: 1em; // 16px
+  }
+}
+
+
+
+
+
+
+
+
+
+
+// --------------------- Адаптив сайту ------------------
+@import "media";
