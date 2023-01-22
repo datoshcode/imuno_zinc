@@ -1,0 +1,16 @@
+body {
+  @include montserrat-400;
+  color: $color-default;
+  background-image: url("../images/bg.jpg");
+  background-position: top center;
+}
+
+ul {
+  list-style: none;
+}
+
+.container {
+  max-width: 1166px;
+  padding: 0 0.9375em;
+  margin: 0 auto;
+}
