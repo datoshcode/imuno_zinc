@@ -116,10 +116,10 @@
 
 // Promo
 .promo {
+  padding-bottom: 70px;
   background-repeat: no-repeat;
   background-position: top center;
   background-size: cover;
-  padding-bottom: 70px;
 
   &__inner {
     display: flex;
@@ -197,8 +197,8 @@
 
   &__decore-img {
     position: absolute;
-    left: 0;
     right: 0;
+    left: 0;
     margin: 0 auto;
   }
 }
@@ -208,14 +208,14 @@
 // About zinc
 
 .about-zinc {
+  background-repeat: no-repeat;
   background-position: left top;
   background-size: cover;
-  background-repeat: no-repeat;
 
   &__inner {
-    padding: 250px 0;
     display: flex;
-    justify-content: space-between;
+    justify-content: space-around;
+    padding: 250px 0;
   }
 
   &__item {
@@ -223,10 +223,6 @@
   }
 
   &__title {
-    @include impact-400;
-    font-size: 36px;
-    line-height: 44px;
-    color: $color-ruby;
     width: 280px;
     margin-left: 10px;
   }
@@ -238,12 +234,106 @@
   }
 
   &--bold {
-    color: $color-ruby;
     @include montserrat-700;
+    color: $color-ruby;
   }
 }
 
 // About zinc /end
+
+// Deficit zinc
+.deficit {
+  padding: 50px 0;
+  background-repeat: no-repeat;
+  background-position: top center;
+  background-size: cover;
+
+  &__title {
+    margin-top: 100px;
+    text-align: center;
+  }
+
+  &__items {
+    margin-top: 65px;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-column-gap: 10px;
+    grid-row-gap: 1em;
+  }
+
+  &__item {
+    width: 252px;
+    height: 57px;
+    overflow: hidden;
+    padding: 7px 5px;
+    padding-left: 12px;
+    border-left: 3px solid $color-dark-ruby;
+    background: linear-gradient(0deg, #c4c4c4 0%, #ffffff 100%);
+    position: relative;
+  }
+
+  &__item-img {
+    width: 40px;
+    height: 40px;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    left: 12px;
+  }
+
+  &__item-text {
+    @include montserrat-400;
+    font-size: 16px;
+    line-height: 20px;
+    display: block;
+    padding: 5px 5px 5px 50px;
+    width: 165px;
+  }
+}
+// Deficit zinc /end
+
+// Qualitys
+.qualitys {
+  padding-bottom: 20px;
+  &__title {
+    text-align: center;
+    margin-top: 100px;
+  }
+
+  &__inner {
+    margin: 0 auto;
+    margin-top: 65px;
+    display: flex;
+    justify-content: space-between;
+    max-width: 1016px;
+  }
+
+  &__list {
+    max-width: 479px;
+  }
+
+  &__item {
+    @include montserrat-400;
+    font-size: 16px;
+    line-height: 22px;
+    color: $color-default;
+    padding: 8px;
+    padding-left: 30px;
+    position: relative;
+  }
+
+  &__item:before {
+    position: absolute;
+    content: "";
+    background-image: url("../images/icons/small_tick.svg");
+    top: 50%;
+    transform: translateY(-50%);
+    left: 0;
+    width: 18px;
+    height: 18px;
+  }
+}
+// Qualitys /end
 
 // --------------------- Адаптив сайту ------------------
 @import "media";

@@ -14,3 +14,11 @@ ul {
   padding: 0 0.9375em;
   margin: 0 auto;
 }
+
+.title {
+  @include impact-400;
+  font-size: 36px;
+  line-height: 44px;
+  color: $color-ruby;
+  letter-spacing: 1px;
+}
