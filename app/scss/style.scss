@@ -83,7 +83,7 @@
     top: 20px;
     left: 0;
     display: none;
-    padding: 7px 5px;
+    padding: 7px 8px;
     color: $color-white;
     border-bottom-right-radius: 5px;
     border-bottom-left-radius: 5px;
@@ -116,10 +116,10 @@
 
 // Promo
 .promo {
-  height: 100vh;
   background-repeat: no-repeat;
   background-position: top center;
   background-size: cover;
+  padding-bottom: 70px;
 
   &__inner {
     display: flex;
@@ -194,8 +194,56 @@
     border-left: 3px solid $color-dark-ruby;
     background: linear-gradient(0deg, #c4c4c4 0%, #ffffff 100%);
   }
+
+  &__decore-img {
+    position: absolute;
+    left: 0;
+    right: 0;
+    margin: 0 auto;
+  }
 }
 
 // Promo /end
+
+// About zinc
+
+.about-zinc {
+  background-position: left top;
+  background-size: cover;
+  background-repeat: no-repeat;
+
+  &__inner {
+    padding: 250px 0;
+    display: flex;
+    justify-content: space-between;
+  }
+
+  &__item {
+    max-width: 500px;
+  }
+
+  &__title {
+    @include impact-400;
+    font-size: 36px;
+    line-height: 44px;
+    color: $color-ruby;
+    width: 280px;
+    margin-left: 10px;
+  }
+
+  &__text {
+    @include montserrat-400;
+    font-size: 16px;
+    line-height: 22px;
+  }
+
+  &--bold {
+    color: $color-ruby;
+    @include montserrat-700;
+  }
+}
+
+// About zinc /end
+
 // --------------------- Адаптив сайту ------------------
 @import "media";
