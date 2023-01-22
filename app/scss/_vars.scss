@@ -1,22 +1,52 @@
 // -------------- Colors -----------------
-// color: $blue;
 
-// $default: #505050;
-// $black-bg: #262626;
-// $grey: #a4a4a4;
-// $white: #fff;
-// $accent: #ff0036;
-
+$color-default: #212529;
+$color-blue: #84bcf9;
+$color-black: #000000;
+$color-accent: #af0a3d;
+$color-ruby: #9d252f;
+$color-white: #ffffff;
+$color-dark-ruby: #832f34;
+$color-background: #f9f9f9;
 
 // -------------- Fonts ------------------
-// @include lato-400;
+// @include impact-400;
 
-// @mixin lato-400 {
-//   font-family: "Lato-Regular", Arial, Helvetica, sans-serif;
-//   font-weight: 400;
-//   font-style: normal;
-// }
+@mixin impact-400 {
+  font-family: "Impact Regular", Arial, Helvetica, sans-serif;
+  font-weight: 400;
+  font-style: normal;
+}
 
+@mixin montserrat-400 {
+  font-family: "Montserrat Regular", Arial, Helvetica, sans-serif;
+  font-weight: 400;
+  font-style: normal;
+}
+
+@mixin montserrat-500 {
+  font-family: "Montserrat Medium", Arial, Helvetica, sans-serif;
+  font-weight: 500;
+  font-style: normal;
+}
+
+@mixin montserrat-600 {
+  font-family: "Montserrat SemiBold", Arial, Helvetica, sans-serif;
+  font-weight: 600;
+  font-style: normal;
+}
+
+@mixin montserrat-700 {
+  font-family: "Montserrat Bold", Arial, Helvetica, sans-serif;
+  font-weight: 700;
+  font-style: normal;
+}
+
+@mixin montserrat-800 {
+  font-family: "Montserrat ExtraBold", Arial, Helvetica, sans-serif;
+  font-weight: 800;
+  font-style: normal;
+}
 
 // ----------------- Buttons ------------------
 
@@ -28,4 +58,3 @@
 //   padding: 0.875em 2.125em;
 //   background-color: $black-bg;
 // }
-

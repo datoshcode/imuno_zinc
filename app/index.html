@@ -1,15 +1,125 @@
+<!-- 
+* Вебсайт розроблено за графічним макетом "Імуно цинк".
+* Усі авторські права на графічний макет належать його автору.
+* Розробка вебсайту по макету виконувалась з навчальною метою без
+отримання в майбутньому грошової винагороди. 
+
+* Автор розробки вебсайту: Андрій Овчаров;
+* E-mail автора: datoshcode@gmail.com;
+* Дата розробки вебсайту: 20.01.2023.
+-->
+
 <!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Document</title>
-  <link rel="stylesheet" href="css/style.min.css">
-</head>
-<body>
-  
-  
-  <script src="js/main.min.js"></script>
-</body>
+<html lang="uk">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Імуно цинк</title>
+    <link rel="stylesheet" href="css/style.min.css" />
+  </head>
+  <body>
+    <!---- Header ---->
+    <header class="header">
+      <div class="container">
+        <div class="header__inner">
+          <div class="header__logo">
+            <a class="header__logo-link" href="#">
+              <img
+                class="header__logo-img"
+                src="images\header_logo.svg"
+                alt="Logo"
+              />
+            </a>
+          </div>
+          <!-- Navigation menu -->
+          <nav class="header__menu">
+            <ul class="header__menu-list">
+              <li class="header__menu-item">
+                <a class="header__menu-link" href="#">Про Цинк</a>
+              </li>
+              <li class="header__menu-item">
+                <a class="header__menu-link" href="#">Про проблематику</a>
+              </li>
+              <li class="header__menu-item">
+                <a class="header__menu-link" href="#">Про Імуно цинк</a>
+              </li>
+              <li class="header__menu-item">
+                <a class="header__menu-link" href="#">Де купити</a>
+              </li>
+            </ul>
+          </nav>
+          <!-- Language selection menu -->
+          <ul class="header__local">
+            <!-- Default language -->
+            <li class="header__local-item">
+              <a class="header__submenu-link" href="#">УКР</a>
+              <span class="header__local-arrow arrow"></span>
+              <ul class="header__submenu">
+                <!-- Русский -->
+                <li class="header__submenu-item">
+                  <a class="header__submenu-link" href="#">РУС</a>
+                </li>
+                <!-- English -->
+                <li class="header__submenu-item">
+                  <a class="header__submenu-link" href="#">EN</a>
+                </li>
+              </ul>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </header>
+    <!------ Header /end ------>
+    <!------ Main ----->
+    <main class="main">
+      <!-- Promo -->
+      <section
+        class="promo"
+        style="background-image: url(images/main_baner/main_baner.png)"
+      >
+        <div class="container">
+          <div class="promo__inner">
+            <div class="promo__item">
+              <div class="promo__item-text">
+                <h1 class="promo__item-title">Імуно цинк</h1>
+                <p class="promo__item-description">
+                  приймай — здоров’я родини оберігай
+                </p>
+                <div class="promo__peculiarities">
+                  <span class="promo__peculiarities-item"
+                    >Зручна форма випуску</span
+                  >
+                  <span class="promo__peculiarities-item">
+                    Активна форма цинк ацетат<sup
+                      class="promo__peculiarities-sup"
+                      >1</sup
+                    >
+                  </span>
+                </div>
+              </div>
+            </div>
+            <div class="promo__item promo__item-imgebox">
+              <img
+                class="promo__item-img promo__product-img"
+                src="images\main_baner\box.png"
+                alt="Box with vitamins"
+              />
+              <img
+                class="promo__item-img promo__label-img"
+                src="images\main_baner\label.png"
+                alt="Label"
+              />
+            </div>
+          </div>
+        </div>
+      </section>
+      <!-- Promo /end -->
+    </main>
+    <!----- Main /end ----->
+
+    <footer class="footer"></footer>
+
+    <script src="js/main.min.js"></script>
+  </body>
 </html>

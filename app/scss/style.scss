@@ -1,8 +1,11 @@
 // ------------------ Імпорт scss файлів ---------------
 
 @import "vars";
+
 @import "fonts";
+
 @import "optimize";
+
 @import "global";
 
 // ----------------------- Базові стилі ----------------
@@ -23,14 +26,176 @@
   }
 }
 
+// Header
 
+.header {
+  position: absolute;
+  right: 0;
+  left: 0;
+  padding-top: 56px;
 
+  &__inner {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
 
+  &__menu {
+    display: flex;
+  }
 
+  &__menu-list {
+    display: flex;
+    gap: 0 43px;
+  }
 
+  &__menu-link,
+  &__submenu-link {
+    font-size: 14px;
+    text-transform: uppercase;
+    color: $color-white;
+  }
 
+  &__menu-link {
+    transition: all 0.3s;
+  }
 
+  &__menu-link:hover {
+    color: $color-accent;
+  }
 
+  // Language selection menu
+  &__local {
+    position: relative;
+    transition: all 0.5s;
+  }
 
+  &__local > li {
+    padding: 0 15px 0 0;
+  }
+
+  .header__local--active .header__submenu {
+    display: block;
+  }
+
+  &__submenu {
+    position: absolute;
+    top: 20px;
+    left: 0;
+    display: none;
+    padding: 7px 5px;
+    color: $color-white;
+    border-bottom-right-radius: 5px;
+    border-bottom-left-radius: 5px;
+    background-color: $color-dark-ruby;
+  }
+
+  &__submenu-item {
+    padding-top: 10px;
+  }
+
+  &__submenu-item > a:hover {
+    color: $color-black;
+  }
+
+  .arrow {
+    position: absolute;
+    top: 9px;
+    right: 0;
+    width: 0;
+    height: 0;
+    border-top: 4px solid $color-white;
+    border-right: 4px solid transparent;
+    border-left: 4px solid transparent;
+  }
+
+  .header__local--active .arrow {
+    transform: rotate(-180deg);
+  }
+}
+
+// Promo
+.promo {
+  height: 100vh;
+  background-repeat: no-repeat;
+  background-position: top center;
+  background-size: cover;
+
+  &__inner {
+    display: flex;
+    justify-content: space-between;
+    padding-top: 225px;
+  }
+
+  &__item {
+    width: 415px;
+  }
+
+  &__item-imgebox {
+    display: flex;
+    justify-content: space-between;
+  }
+
+  &__product-img {
+    max-width: 316px;
+    height: 453px;
+  }
+
+  &__label-img {
+    width: 156px;
+    height: 60px;
+    margin-top: 40px;
+  }
+
+  &__item-text {
+    padding-top: 100px;
+    text-align: center;
+  }
+
+  &__item-title {
+    @include montserrat-700;
+    font-size: 41px;
+    line-height: 51px;
+    display: block;
+    width: 320px;
+    margin: 0 auto;
+    padding: 12px 30px;
+    color: $color-white;
+    background: linear-gradient(157.22deg, #a63f43 14.79%, #92232c 85.92%);
+  }
+
+  &__item-description {
+    @include montserrat-500;
+    font-size: 32px;
+    line-height: 45px;
+    padding-top: 25px;
+    color: $color-white;
+  }
+
+  &__peculiarities {
+    display: flex;
+    gap: 0 27px;
+    align-items: center;
+    justify-content: center;
+    width: 340px;
+    margin: 0 auto;
+    margin-top: 40px;
+  }
+
+  &__peculiarities-item {
+    @include montserrat-400;
+    font-size: 12px;
+    line-height: 17px;
+    width: 120px;
+    padding: 7px 9px;
+    text-align: left;
+    border: 2px solid $color-dark-ruby;
+    border: none;
+    border-left: 3px solid $color-dark-ruby;
+    background: linear-gradient(0deg, #c4c4c4 0%, #ffffff 100%);
+  }
+}
+
+// Promo /end
 // --------------------- Адаптив сайту ------------------
 @import "media";
