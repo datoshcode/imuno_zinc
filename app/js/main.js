@@ -4,3 +4,6 @@ $(function () {
     $(".header__local-item").toggleClass("header__local--active");
   });
 });
+
+// Modal window
+
