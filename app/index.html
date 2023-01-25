@@ -2,7 +2,7 @@
 * Розробка вебсайту по тестовому макету "Імуно цинк";
 * Розробник: Андрій Овчаров;
 * E-mail: datoshcode@gmail.com;
-* Дата розробки вебсайту: 24.01.2023.
+* Дата розробки вебсайту: 25.01.2023.
 -->
 
 <!DOCTYPE html>
@@ -15,6 +15,8 @@
     <link rel="stylesheet" href="css/style.min.css" />
   </head>
   <body>
+    <!-- Button scroll to top -->
+    <div class="btn-up btn-up_hide"></div>
     <!---- Header ---->
     <header class="header">
       <div class="container">
@@ -790,11 +792,10 @@
             </div>
           </div>
           <p class="questions__warning">
-              Реклама дієтичної добавки. не є лікарським засобом. Продукт не
-              може використовуватися в якості заміни збалансованого харчування.
-              Перед вживанням проконсультуйтесь з фахівцем, ознайомтеся з
-              інструкцією.
-            </p>
+            Реклама дієтичної добавки. не є лікарським засобом. Продукт не може
+            використовуватися в якості заміни збалансованого харчування. Перед
+            вживанням проконсультуйтесь з фахівцем, ознайомтеся з інструкцією.
+          </p>
         </div>
       </section>
       <!-- Questions /end -->
@@ -804,11 +805,41 @@
         <div class="container">
           <h2 class="partners__title title">Де купити</h2>
           <div class="partners__inner">
-            <img src="images/partners/partner_1.png" alt="Аптека НЦ" class="partners__img">
-            <img src="images/partners/partner_2.png" alt="Аптека Доброго дня" class="partners__img">
-            <img src="images/partners/partner_3.png" alt="Аптека 911" class="partners__img">
-            <img src="images/partners/partner_4.png" alt="Liki 24" class="partners__img">
-            <img src="images/partners/partner_5.png" alt="Tabletki ua" class="partners__img">
+            <a href="#" class="partners__link">
+              <img
+                src="images/partners/partner_1.png"
+                alt="Аптека НЦ"
+                class="partners__img"
+              />
+            </a>
+            <a href="#" class="partners__link">
+              <img
+                src="images/partners/partner_2.png"
+                alt="Аптека Доброго дня"
+                class="partners__img"
+              />
+            </a>
+            <a href="#" class="partners__link">
+              <img
+                src="images/partners/partner_3.png"
+                alt="Аптека 911"
+                class="partners__img"
+              />
+            </a>
+            <a href="#" class="partners__link">
+              <img
+                src="images/partners/partner_4.png"
+                alt="Liki 24"
+                class="partners__img"
+              />
+            </a>
+            <a href="#" class="partners__link">
+              <img
+                src="images/partners/partner_5.png"
+                alt="Tabletki ua"
+                class="partners__img"
+              />
+            </a>
           </div>
         </div>
       </section>
@@ -817,13 +848,24 @@
       <!-- Links -->
       <div class="reference">
         <div class="container">
-          <ol type = "1" class="reference__list">
-            <li  class="reference__list-item">
+          <ol type="1" class="reference__list">
+            <li class="reference__list-item">
               Інструкція по застосуванню Імуно Цинк Орион
             </li>
-            <li class="reference__list-item">«The effectiveness of high dose zinc acetate lozenges on various common cold symptoms: a meta-analysis», Harri Hemilä & Elizabeth Chalker, BMC Family Practice volume 16, Article number: 24 (2015)</li>
-            <li class="reference__list-item">Національній інститут здоров’я США «Цинк», Інформаційний бюлетень для медичних представників, 
-            <a class="reference__list-link" href="https://ods.od.nih.gov/factsheets/Zinc-HealthProfessiona">https://ods.od.nih.gov/factsheets/Zinc-HealthProfessiona</a></li>
+            <li class="reference__list-item">
+              «The effectiveness of high dose zinc acetate lozenges on various
+              common cold symptoms: a meta-analysis», Harri Hemilä & Elizabeth
+              Chalker, BMC Family Practice volume 16, Article number: 24 (2015)
+            </li>
+            <li class="reference__list-item">
+              Національній інститут здоров’я США «Цинк», Інформаційний бюлетень
+              для медичних представників,
+              <a
+                class="reference__list-link"
+                href="https://ods.od.nih.gov/factsheets/Zinc-HealthProfessiona"
+                >https://ods.od.nih.gov/factsheets/Zinc-HealthProfessiona</a
+              >
+            </li>
           </ol>
         </div>
       </div>
@@ -831,9 +873,101 @@
     </main>
     <!----- Main /end ----->
 
-    <footer class="footer"></footer>
+    <!-- Footer -->
+    <footer class="footer">
+      <div class="container">
+        <div class="footer__inner">
+          <div class="footer__top">
+            <div class="footer__item">
+              <a href="#" class="footer__logo-link">
+                <img
+                  src="images/footer_logo.svg"
+                  alt="Logo"
+                  class="footer__logo"
+                />
+              </a>
+            </div>
+            <div class="footer__item">
+              <div class="footer__name">
+                <p class="footer__name-text">
+                  Представництво "Оріон<br />
+                  Корпорейш" в Україні
+                </p>
+              </div>
+            </div>
+            <div class="footer__item">
+              <ul class="footer__address-list">
+                <li class="footer__address-item">
+                  03067, Київ, БЦ "Avenue 53",
+                </li>
+                <li class="footer__address-item">
+                  просп. Перемоги 53, офіс 101
+                </li>
+              </ul>
+            </div>
+            <div class="footer__item">
+              <div class="footer__social">
+                <!-- Facebook link -->
+                <a href="#" class="footer__social-facebook" target="_blank">
+                  <img
+                    src="images/icons/facebook.svg"
+                    alt="Facebook"
+                    class="footer__social-facebook-img"
+                  />
+                </a>
+                <!-- Instagram link -->
+                <a href="#" class="footer__social-instagram" target="_blank">
+                  <img
+                    src="images/icons/instagram.svg"
+                    alt="Instagram"
+                    class="footer__social-instagram-img"
+                  />
+                </a>
+              </div>
+            </div>
+          </div>
+          <div class="footer__copy">
+            <a href="#" class="footer__copy-item">Політика конфіденційності</a>
+            <a href="#" class="footer__copy-item">Показати свідоцтво</a>
+            <span class="footer__copy-item">Сreated by Level Media</span>
+          </div>
+        </div>
+      </div>
+    </footer>
+    <!-- Footer /end -->
 
+    <!-- Scipts -->
     <script src="js/main.min.js"></script>
+
+    <!-- Script button to top -->
+    <script>
+      const btnUp = {
+        el: document.querySelector(".btn-up"),
+        show() {
+          // удалим у кнопки класс btn-up_hide
+          this.el.classList.remove("btn-up_hide");
+        },
+        hide() {
+          this.el.classList.add("btn-up_hide");
+        },
+        addEventListener() {
+          window.addEventListener("scroll", () => {
+            const scrollY =
+              window.scrollY || document.documentElement.scrollTop;
+            scrollY > 400 ? this.show() : this.hide();
+          });
+          document.querySelector(".btn-up").onclick = () => {
+            window.scrollTo({
+              top: 0,
+              left: 0,
+              behavior: "smooth",
+            });
+          };
+        },
+      };
+      btnUp.addEventListener();
+    </script>
+    <!-- Script buttom to top /end -->
 
     <!-- Modal windows -->
     <div id="popup" class="popup">
@@ -940,5 +1074,6 @@
         </div>
       </div>
     </div>
+    <!-- Modal windows /end -->
   </body>
 </html>

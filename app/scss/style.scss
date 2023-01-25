@@ -696,6 +696,7 @@
   transition: all 0.8s ease 0s;
   opacity: 0;
   background-color: rgba(0, 0, 0, 0.8);
+  z-index: 15;
 
   &__body {
     display: flex;
@@ -884,76 +885,75 @@
 
 // Questions
 .questions {
-
   &__inner {
     display: flex;
     justify-content: space-between;
   }
+
   &__item {
     padding-top: 150px;
   }
 
-&__item-title {
-  max-width: 476px;
-  text-align: center;
-}
+  &__item-title {
+    max-width: 476px;
+    text-align: center;
+  }
 
-// Questions list
+  // Questions list
 
-&__item-list,
-#questions__list {
-  max-width: 554px;
-  width: 100%;
-}
+  &__item-list,
+  #questions__list {
+    width: 100%;
+    max-width: 554px;
+  }
 
-&__list-item {
-  @include montserrat-700;
-  font-size: 18px;
-  padding: 20px 0;
-  border-top: 1px solid $color-ruby; 
-  position: relative;
-  cursor: pointer;
-  padding-left: 30px;
-}
+  &__list-item {
+    @include montserrat-700;
+    font-size: 18px;
+    position: relative;
+    padding: 20px 0;
+    padding-left: 30px;
+    cursor: pointer;
+    border-top: 1px solid $color-ruby;
+  }
 
-&__list-item::before {
-  position: absolute;
-  content: "";
-  background-image: url(../images/icons/plus.svg);
-  background-repeat: no-repeat;
-  width: 12px;
-  height: 12px;
-  top: 50%;
-  left: 0;
-}
+  &__list-item::before {
+    position: absolute;
+    top: 50%;
+    left: 0;
+    width: 12px;
+    height: 12px;
+    content: "";
+    background-image: url(../images/icons/plus.svg);
+    background-repeat: no-repeat;
+  }
 
-&__list-item.questions__list--active::before{
-background-image: url(../images/icons/minus.svg);
-}
+  &__list-item.questions__list--active::before {
+    background-image: url(../images/icons/minus.svg);
+  }
 
-&__list-item:last-child {
-  border-bottom: 1px solid $color-ruby;
-}
+  &__list-item:last-child {
+    border-bottom: 1px solid $color-ruby;
+  }
 
-&__sublist-item {
-  @include montserrat-400;
-  font-size: 16px;
-  padding-top: 20px;
-}
+  &__sublist-item {
+    @include montserrat-400;
+    font-size: 16px;
+    padding-top: 20px;
+  }
 
-&__list--active {
-  color: $color-ruby;
-}
+  &__list--active {
+    color: $color-ruby;
+  }
 
-&__sublist-item {
-  color: $color-default !important;
-}
+  &__sublist-item {
+    color: $color-default !important;
+  }
 
-&__warning {
-  text-align: center;
-   padding-top: 80px;
-}
-
+  &__warning {
+    padding-top: 80px;
+    text-align: center;
+  }
 }
 
 #questions__list > li > ul {
@@ -964,13 +964,14 @@ background-image: url(../images/icons/minus.svg);
 
 // Partners
 .partners {
-  background-color: rgba(0, 0, 0, 0.04);
   margin-top: 70px;
+  background-color: rgba(0, 0, 0, 0.04);
 
   &__title {
     padding-top: 74px;
     text-align: center;
-  } 
+  }
+
   &__inner {
     display: flex;
     justify-content: space-between;
@@ -978,21 +979,91 @@ background-image: url(../images/icons/minus.svg);
     padding-bottom: 187px;
   }
 }
+
 // Partners /end
 
 // Links
-
 .reference {
-  padding: 70px 0;
+  padding: 70px 5px;
 
-&__list-item {
-  line-height: 22px;
-}
-&__list-link {
+  &__list-item {
+    line-height: 22px;
+  }
+
+  &__list-link {
     color: $color-blue;
   }
 }
 
+// Links /end
 
-// --------------------- Адаптив сайту ------------------
+// Footer
+.footer {
+  background-color: rgba(0, 0, 0, 0.04);
+
+  &__inner {
+    padding: 40px 0;
+  }
+
+  &__top {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding-bottom: 50px;
+  }
+
+  &__social-instagram {
+    margin-left: 40px;
+  }
+
+  &__copy {
+    display: flex;
+    gap: 0 126px;
+    justify-content: flex-end;
+  }
+
+  &__copy a {
+    padding-top: 2px;
+    color: $color-blue;
+    border-bottom: 1px solid $color-blue;
+  }
+}
+
+// Вutton to top
+.btn-up {
+  position: fixed;
+  z-index: 10;
+  right: 110px;
+  bottom: 123px;
+  width: 44px;
+  height: 44px;
+  cursor: pointer;
+  border-radius: 22px;
+  background-color: $color-accent;
+}
+
+.btn-up::before {
+  position: absolute;
+  top: 16px;
+  left: 14px;
+  align-content: center;
+  width: 20px;
+  height: 20px;
+  content: "";
+  text-align: center;
+  background-image: url("../images/icons/arrow-top.svg");
+  background-repeat: no-repeat;
+}
+
+.btn-up_hide {
+  display: none;
+}
+
+@media (hover: hover) and (pointer: fine) {
+  .btn-up:hover {
+    background-color: $color-accent;
+  }
+}
+// Footer /end
+// ----- Site responsive file -----------
 @import "media";
