@@ -5,5 +5,14 @@ $(function () {
   });
 });
 
-// Modal window
-
+// Questions list
+$(function () {
+  $("#questions__list > li").click(function (event) {
+    $(this).children("ul").slideToggle();
+      event.stopPropagation();
+      $('.questions__list-item').click(function(event) {
+      $('.questions__list-item').removeClass("questions__list--active");
+      $(this).addClass("questions__list--active");
+      });
+    });
+});
